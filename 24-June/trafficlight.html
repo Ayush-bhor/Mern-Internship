@@ -3,24 +3,26 @@
 
 <head>
     <title>Traffic Signal</title>
+
     <style>
         body {
-            margin-top: 50px;
             text-align: center;
-
+            margin-top: 50px;
+            font-family: Arial;
         }
 
         .light {
-            height: 80px;
-            width: 80px;
-            border: 1px solid;
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
             border-radius: 50%;
-            margin-left: 600px;
-
+            background-color: lightgray;
+            margin: 10px auto;
         }
 
         button {
-            margin-top: 50px;
+            padding: 10px 20px;
+            margin: 10px;
             cursor: pointer;
         }
     </style>
@@ -30,17 +32,36 @@
 
     <h1>Traffic Signal</h1>
 
-    <div class="signal">
-        <div class="light" id="red"></div>
-        <div class="light" id="yellow"></div>
-        <div class="light" id="green"></div>
-    </div>
+    <div class="light" id="red"></div>
+    <div class="light" id="yellow"></div>
+    <div class="light" id="green"></div>
 
-    <button id="redBtn">Red</button>
-    <button id="yellowBtn">Yellow</button>
-    <button id="greenBtn">Green</button>
+    <button onclick="showRed()">Red</button>
+    <button onclick="showYellow()">Yellow</button>
+    <button onclick="showGreen()">Green</button>
 
+    <script>
+        function turnOff() {
+            document.getElementById("red").style.backgroundColor = "lightgray";
+            document.getElementById("yellow").style.backgroundColor = "lightgray";
+            document.getElementById("green").style.backgroundColor = "lightgray";
+        }
 
+        function showRed() {
+            turnOff();
+            document.getElementById("red").style.backgroundColor = "red";
+        }
+
+        function showYellow() {
+            turnOff();
+            document.getElementById("yellow").style.backgroundColor = "yellow";
+        }
+
+        function showGreen() {
+            turnOff();
+            document.getElementById("green").style.backgroundColor = "green";
+        }
+    </script>
 
 </body>
 
