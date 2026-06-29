@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rotating Nested Squares</title>
+
+    <style>
+        body{
+            margin:0;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .canvas{
+            width:400px;
+            height:400px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            transform:rotate(45deg);
+        }
+
+        .square{
+            width:90%;
+            height:90%;
+            border:2px solid black;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            animation:spin 15s linear infinite;
+        }
+
+        @keyframes spin{
+            from{
+                transform:rotate(0deg);
+            }
+            to{
+                transform:rotate(360deg);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="canvas">
+
+    <div class="square">
+        <div class="square">
+            <div class="square">
+                <div class="square">
+                    <div class="square">
+                        <div class="square">
+                            <div class="square">
+                                <div class="square">
+                                    <div class="square">
+                                        <div class="square"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

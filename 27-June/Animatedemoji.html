@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animated Emoji Face</title>
+
+    <style>
+        body{
+            background-color:lightblue;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .face{
+            width:200px;
+            height:200px;
+            background:yellow;
+            border-radius:50%;
+            position:relative;
+        }
+
+        /* Left Eye */
+        .left-eye{
+            width:40px;
+            height:40px;
+            background:white;
+            border-radius:50%;
+            position:absolute;
+            top:50px;
+            left:45px;
+        }
+
+        /* Right Eye */
+        .right-eye{
+            width:40px;
+            height:40px;
+            background:white;
+            border-radius:50%;
+            position:absolute;
+            top:50px;
+            right:45px;
+        }
+
+        /* Left Eye Ball */
+        .left-ball{
+            width:15px;
+            height:15px;
+            background:black;
+            border-radius:50%;
+            position:absolute;
+            top:13px;
+            left:13px;
+            animation:move 2s infinite;
+        }
+
+        /* Right Eye Ball */
+        .right-ball{
+            width:15px;
+            height:15px;
+            background:black;
+            border-radius:50%;
+            position:absolute;
+            top:13px;
+            left:13px;
+            animation:move 2s infinite;
+        }
+
+        @keyframes move{
+            0%{left:13px;}
+            25%{left:18px;}
+            50%{left:13px;}
+            75%{left:8px;}
+            100%{left:13px;}
+        }
+
+        /* Mouth */
+        .mouth{
+            width:80px;
+            height:40px;
+            background:black;
+            border-radius:0 0 50px 50px;
+            position:absolute;
+            bottom:40px;
+            left:60px;
+        }
+
+        /* Tongue */
+        .tongue{
+            width:40px;
+            height:20px;
+            background:pink;
+            border-radius:50%;
+            position:absolute;
+            bottom:0;
+            left:20px;
+        }
+
+        /* Cheeks */
+        .left-cheek{
+            width:20px;
+            height:20px;
+            background:pink;
+            border-radius:50%;
+            position:absolute;
+            top:120px;
+            left:20px;
+        }
+
+        .right-cheek{
+            width:20px;
+            height:20px;
+            background:pink;
+            border-radius:50%;
+            position:absolute;
+            top:120px;
+            right:20px;
+        }
+
+        /* Simple Hover */
+        .face:hover{
+            background:red;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="face">
+
+    <div class="left-eye">
+        <div class="left-ball"></div>
+    </div>
+
+    <div class="right-eye">
+        <div class="right-ball"></div>
+    </div>
+
+    <div class="left-cheek"></div>
+    <div class="right-cheek"></div>
+
+    <div class="mouth">
+        <div class="tongue"></div>
+    </div>
+
+</div>
+
+</body>
+</html>
