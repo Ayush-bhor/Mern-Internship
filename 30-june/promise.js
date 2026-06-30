@@ -9,7 +9,6 @@ function transferMoney(amount) {
 
             let balance = 1000;
 
-            // Check if balance is sufficient
             if (balance >= amount) {
                 resolve(` ₹${amount} transferred successfully.`);
             } else {
