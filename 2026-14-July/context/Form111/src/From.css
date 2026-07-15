@@ -1,0 +1,167 @@
+.musicPage {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 16px;
+  background:
+    radial-gradient(
+      1200px 600px at 10% -10%,
+      rgba(255, 75, 43, 0.18),
+      transparent 55%
+    ),
+    radial-gradient(
+      900px 500px at 90% 0%,
+      rgba(255, 31, 90, 0.12),
+      transparent 55%
+    ),
+    linear-gradient(180deg, rgba(16, 16, 18, 0.95), rgba(24, 24, 28, 0.9));
+}
+
+.musicCard {
+  width: 480px;
+  max-width: 100%;
+  background: rgba(20, 20, 24, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: var(--shadow);
+  border-radius: 18px;
+  padding: 22px;
+  backdrop-filter: blur(10px);
+  text-align: left;
+}
+
+.musicHeader {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.ytMusicLogo {
+  display: block;
+  width: 52px;
+  height: 52px;
+  flex: 0 0 auto;
+}
+
+.brandPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(255, 75, 43, 0.16);
+  border: 1px solid rgba(255, 75, 43, 0.3);
+  color: #ff7a63;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.musicTitle {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: -0.7px;
+  color: var(--text-h);
+}
+
+.musicSubtitle {
+  margin: 6px 0 0 0;
+  font-size: 14px;
+  color: rgba(243, 244, 246, 0.74);
+}
+
+.musicForm {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.field span {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(243, 244, 246, 0.78);
+}
+
+.field input {
+  width: 100%;
+  height: 42px;
+  padding: 0 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  outline: none;
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(243, 244, 246, 0.94);
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.05s ease;
+  font-size: 14px;
+}
+
+.field input:focus {
+  border-color: rgba(255, 75, 43, 0.65);
+  box-shadow: 0 0 0 4px rgba(255, 75, 43, 0.16);
+}
+
+.checkRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  user-select: none;
+  color: rgba(243, 244, 246, 0.78);
+  font-size: 14px;
+}
+
+.checkRow input {
+  width: 18px;
+  height: 18px;
+  accent-color: #ff4b2b;
+}
+
+.loginBtn {
+  height: 46px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff4b2b, #ff1f5a);
+  color: white;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  transition:
+    transform 0.08s ease,
+    filter 0.15s ease,
+    box-shadow 0.15s ease;
+  box-shadow: 0 10px 22px rgba(255, 75, 43, 0.28);
+}
+
+.loginBtn:hover {
+  filter: brightness(1.03);
+  box-shadow: 0 12px 26px rgba(255, 75, 43, 0.34);
+}
+.loginBtn:active {
+  transform: translateY(1px);
+}
+.loginBtn:focus {
+  outline: 3px solid rgba(255, 75, 43, 0.25);
+  outline-offset: 2px;
+}
+
+.finePrint {
+  font-size: 12px;
+  line-height: 1.35;
+  margin-top: 4px;
+  color: rgba(243, 244, 246, 0.62);
+}
+
+@media (prefers-color-scheme: dark) {
+  .field input::placeholder {
+    color: rgba(243, 244, 246, 0.45);
+  }
+}

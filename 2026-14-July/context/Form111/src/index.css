@@ -1,0 +1,39 @@
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	font-family: Inter, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+	color-scheme: dark;
+	color: rgba(243, 244, 246, 0.96);
+	background: #111114;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	--text-h: rgba(243, 244, 246, 0.98);
+	--shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
+}
+
+html,
+body,
+#root {
+	min-height: 100%;
+}
+
+body {
+	margin: 0;
+	min-width: 320px;
+	background: #111114;
+}
+
+button,
+input {
+	font: inherit;
+}
+
+a {
+	color: inherit;
+}
