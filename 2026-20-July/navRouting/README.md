@@ -2,6 +2,27 @@
 
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
+## VS Code Path Intellisense setup
+
+This workspace is configured to work with the Path Intellisense extension in VS Code.
+
+Install the extension globally from the Marketplace:
+
+- [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
+
+The workspace settings disable the built-in TypeScript and JavaScript path suggestions so Path Intellisense can handle filename autocomplete consistently.
+
+If you want the same behavior in other projects, add these settings to your user settings:
+
+```json
+{
+	"typescript.suggest.paths": false,
+	"javascript.suggest.paths": false
+}
+```
+
+The extension also supports common mappings through `path-intellisense.mappings` and tsconfig `baseUrl` / `paths`.
+
 Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
