@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+:root{
+	--bg: #0f172a;
+	--card: #0b1220;
+	--muted: #94a3b8;
+}
+
+html,body,#root{height:100%;}
+body{
+	font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+	background: #f8fafc;
+	color: #0f172a;
+}
+
+.container{max-width:1000px;margin:0 auto;padding:1.25rem}
+.glass{background:#ffffff;border:1px solid rgba(15,23,42,0.06);box-shadow:0 1px 3px rgba(15,23,42,0.06);}
+.glass img{display:block}
+.brand{letter-spacing:0.2px}
+.muted{color:#6b7280}
+
+/* Utility tweaks for inputs and buttons to match light theme */
+input, button, textarea, select{font-family:inherit}
+input, textarea{background:#ffffff;color:#0f172a}
+button:focus, input:focus{outline:none}

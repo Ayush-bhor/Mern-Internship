@@ -2,7 +2,7 @@ const express = require("express");
 
 const router = express.Router();
 
-const { handleAddBookController, handleGetAllBookController, handleDeleteBookController } = require("../Controller/bookController");
+const { handleAddBookController, handleGetAllBookController, handleDeleteBookController,handleUpdateBookController } = require("../Controller/bookController");
 
 router.get("/getmsg", (req, res) => {
   res.send("Response from Book Router");
@@ -10,7 +10,7 @@ router.get("/getmsg", (req, res) => {
 
 router.post("/addBook", handleAddBookController);
 router.get("/getBook", handleGetAllBookController);
-router.delete("/deleteBook/:id", handleDeleteBookController)
 router.delete("/deleteBook", handleDeleteBookController)
+router.put("/updateBook", handleUpdateBookController)
 
 module.exports = router;

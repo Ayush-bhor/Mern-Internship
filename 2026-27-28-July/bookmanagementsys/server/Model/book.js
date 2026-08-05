@@ -17,6 +17,10 @@ const schema=new mongoose.Schema({
         type:String,
         required:false
     },
+    bookCoverUrl:{
+        type:String,
+        required:false
+    },
     
 })
 

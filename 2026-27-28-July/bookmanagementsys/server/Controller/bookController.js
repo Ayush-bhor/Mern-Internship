@@ -5,7 +5,7 @@ const handleAddBookController = async (req, res) => {
     const data = req.body;
     let bookDetails = await Book.create(data);
     
-    return res.status(200).json({ Message: "Details Added" });
+    return res.status(200).json({ Message: "Details Added", Book: bookDetails });
   } catch (err) {
     return res.status(500).json({ Message: err.message });
   }
@@ -41,6 +41,21 @@ const handleDeleteBookController = async (req, res) => {
   }
 };
 
+const handleUpdateBookController = async (req, res) => {
+  try {
+    const id = req.params.id || req.body._id;
+    const data = req.body;
 
+    const updatedDetails = await Book.findByIdAndUpdate(id, data, { new: true });
 
-module.exports = { handleAddBookController , handleGetAllBookController, handleDeleteBookController};
+    if (!updatedDetails) {
+      return res.status(404).json({ Message: "Book not found" });
+    }
+
+    return res.status(200).json({ Message: "Book details updated successfully", Book: updatedDetails });
+  } catch (err) {
+    return res.status(500).json({ Message: err.message });
+  }
+};
+
+module.exports = { handleAddBookController , handleGetAllBookController, handleDeleteBookController, handleUpdateBookController};

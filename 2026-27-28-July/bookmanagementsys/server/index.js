@@ -1,10 +1,12 @@
 const express = require("express");
 const databaseConnection = require("./database");
 const app = express();
-
+const cors = require("cors");
 const router = require("./Route/bookRoute");
 
 databaseConnection();
+
+app.use(cors());
 
 app.use(express.json());
 
